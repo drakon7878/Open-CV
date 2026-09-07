@@ -1,0 +1,29 @@
+import cv2
+
+img1 = cv2.imread("H:/Coding/Jetlearn Python Lessons/opencv/img1.jpg")
+rImg1 = cv2.resize(img1 , (500,500))
+cv2.imshow("Image 1" , rImg1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+img2 = cv2.imread("H:/Coding/Jetlearn Python Lessons/opencv/img2.jpg")
+rImg2 = cv2.resize(img2 , (500,500))
+cv2.imshow("Image 2" , rImg2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+gImg1 = cv2.cvtColor(rImg1,cv2.COLOR_BGR2GRAY)
+HSVimg2 = cv2.cvtColor(rImg2 , cv2.COLOR_BGR2HSV)
+
+cv2.imshow("Grayscale 1" , gImg1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+cv2.imshow("HSV 2" , HSVimg2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+added = cv2.add(rImg1 , rImg2)
+cv2.imshow("Added Image" , added)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
